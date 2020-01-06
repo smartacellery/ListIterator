@@ -4,10 +4,21 @@ public class Task {
      private String description;
      
       public Task(String n, String d){
-        name=n;
+       name=n;
         description=d;
     }
-    
+    public String getName(){
+        return name;
+    }
+    public String getDescription(){
+        return description;
+    }
+    public void setName(String n){
+        name=n;
+    }
+    public void setDescription(String d){
+        description=d;
+    }
     public boolean validate(){
         if(name == null || description == null || name.equals("") || description.equals(""))
                 return false;
@@ -16,6 +27,6 @@ public class Task {
     }
     
     public String toString(){
-        return "Name: " + name + "\nDescription: "+ description "\n=============\n";
+        return ("Name: " + name + "\n Description: "+ description +"\n=============\n" );
     }
 }
